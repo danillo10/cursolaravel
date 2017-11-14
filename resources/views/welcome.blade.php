@@ -41,5 +41,24 @@
                 <div class="title">Laravel 5</div>
             </div>
         </div>
+
+        <div class="container">
+            
+            <div>
+                <form action="/contato" method="post">
+                    {{ csrf_field() }}
+                    <input type="text" name="nome" placeholder="Name / POST">
+                    <button>Enviar</button>
+                </form>
+
+                <form action="/contato" method="post">
+                    {{ csrf_field() }}
+                    <input type="hidden" name="_method" value="put">
+                    <input type="text" name="nome" placeholder="Name / POST">
+                    <button>Enviar</button>
+                </form>
+            </div>
+
+        </div>
     </body>
 </html>
